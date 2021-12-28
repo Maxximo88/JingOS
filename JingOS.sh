@@ -119,6 +119,7 @@ do
 		;;
 		"Quit")
 			echo 'Remember to follow me on Caroblog.it and Twitter @Maxximo88'
+			echo ''
 			break
 		;;
 		*) echo invalid option;;
