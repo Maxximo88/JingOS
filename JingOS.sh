@@ -63,7 +63,7 @@ do
 		;;		
 		"Install GNU/Linux proposed software")
 			sudo apt update
-			sudo apt install -y wget software-properties-common apt-transport-https dirmngr ttf-mscorefonts-installer libdvd-pkg python3 libreoffice libreoffice-gtk2 libreoffice-style-sifr libreoffice-l10n-it gimp rawtherapee bluefish inkscape openscad krita gdebi synaptic evince ifuse bleachbit openjdk-8-jre vlc thunderbird filezilla neofetch git snapd
+			sudo apt install -y wget software-properties-common apt-transport-https dirmngr ttf-mscorefonts-installer libdvd-pkg python3 libreoffice libreoffice-gtk2 libreoffice-style-sifr libreoffice-l10n-it gimp rawtherapee bluefish inkscape openscad krita gdebi synaptic evince ifuse bleachbit openjdk-8-jre vlc thunderbird filezilla neofetch nautilus git snapd
 			sudo dpkg-reconfigure libdvd-pkg
 			sudo apt install -f
 			neofetch
