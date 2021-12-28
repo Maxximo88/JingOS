@@ -65,11 +65,11 @@ do
 		;;		
 		"Install GNU/Linux proposed software")
 			sudo apt update
-			sudo apt install -y apt-transport-https apt-xapian-index bleachbit bluefish chafa deborphan dirmngr
-			sudo apt install -y evince filezilla gdebi gimp rawtherapee git ifuse inkscape krita libdvd-pkg
-			sudo apt install -y libgtk-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus
-			sudo apt install -y neofetch openjdk-8-jre openscad python3 snapd software-properties-common software-properties-gtk
-			sudo apt install -y synaptic tasksel thunderbird ttf-mscorefonts-installer vlc wget
+			sudo apt install -y apt-transport-https apt-xapian-index audacity bleachbit blender bluefish chafa deborphan dirmngr
+			sudo apt install -y evince filezilla gdebi gimp rawtherapee git htop ifuse inkscape Kdenlive krita libdvd-pkg
+			sudo apt install -y libgtk-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus neofetch
+			sudo apt install -y openjdk-8-jre openscad openshot python3 rhythmbox snapd software-properties-common software-properties-gtk
+			sudo apt install -y synaptic stacer tasksel thunderbird ttf-mscorefonts-installer vlc wget
 			sudo dpkg-reconfigure libdvd-pkg
 			sudo apt install -f
 			clear
