@@ -66,10 +66,20 @@ do
 		"Install GNU/Linux proposed software")
 			sudo apt update
 			sudo apt install -y apt-transport-https apt-xapian-index audacity bleachbit blender bluefish chafa deborphan dirmngr
+			clear
+			echo '1/5 Apps installed..'
 			sudo apt install -y evince filezilla gdebi gimp rawtherapee git htop ifuse inkscape Kdenlive krita libdvd-pkg
+			clear
+			echo '2/5 Apps installed..'
 			sudo apt install -y libgtk-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus neofetch
+			clear
+			echo '3/5 Apps installed..'
 			sudo apt install -y openjdk-8-jre openscad openshot python3 rhythmbox snapd software-properties-common software-properties-gtk
+			clear
+			echo '4/5 Apps installed..'
 			sudo apt install -y synaptic stacer tasksel thunderbird ttf-mscorefonts-installer vlc wget
+			clear
+			echo 'All Apps are now installed..'
 			sudo dpkg-reconfigure libdvd-pkg
 			sudo apt install -f
 			clear
