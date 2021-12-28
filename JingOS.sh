@@ -39,6 +39,7 @@ do
 			sudo apt install japm
 			sudo systemctl enable android-compatible-env --now
 			echo ''
+			clear
 			echo 'Ok, the Android compatibility for JingPad A1 is now installed and ready to work!'
 			echo 'I suggest to reboot your device'
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
@@ -58,14 +59,20 @@ do
 			echo 'Install Open Board'
 			wget "https://github.com/dslul/openboard/releases/download/v1.4.3/app-release.apk" -O ./keyboard.apk
 			sudo japm install -i ./keyboard.apk
+			clear
 			echo ''
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;		
 		"Install GNU/Linux proposed software")
 			sudo apt update
-			sudo apt install -y wget software-properties-common apt-transport-https dirmngr ttf-mscorefonts-installer libdvd-pkg python3 libreoffice libreoffice-gtk2 libreoffice-style-sifr libreoffice-l10n-it gimp rawtherapee bluefish inkscape openscad krita gdebi synaptic evince ifuse bleachbit openjdk-8-jre vlc thunderbird filezilla neofetch nautilus git snapd
+			sudo apt install -y apt-transport-https apt-xapian-index bleachbit bluefish chafa deborphan dirmngr
+			sudo apt install -y evince filezilla gdebi gimp rawtherapee git ifuse inkscape krita libdvd-pkg
+			sudo apt install -y libgtk-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus
+			sudo apt install -y neofetch openjdk-8-jre openscad python3 snapd software-properties-common software-properties-gtk
+			sudo apt install -y synaptic tasksel thunderbird ttf-mscorefonts-installer vlc wget
 			sudo dpkg-reconfigure libdvd-pkg
 			sudo apt install -f
+			clear
 			neofetch
 			echo 'Neofetch is nice uh?'
 			echo ''
@@ -90,6 +97,7 @@ do
 			echo ''
 			sudo apt clean
 			echo ''
+			clear
 			echo ''
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;
