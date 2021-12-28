@@ -62,6 +62,7 @@ do
 			clear
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
+			echo 'What do you want to do now?'
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;		
 		"Install GNU/Linux proposed software")
@@ -88,6 +89,7 @@ do
 			echo 'Neofetch is nice uh?'
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
+			echo 'What do you want to do now?'
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;
 		"Clean Distro")
@@ -112,6 +114,7 @@ do
 			clear
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
+			echo 'What do you want to do now?'
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;
 		"Quit")
