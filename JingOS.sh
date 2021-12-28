@@ -60,6 +60,7 @@ do
 			wget "https://github.com/dslul/openboard/releases/download/v1.4.3/app-release.apk" -O ./keyboard.apk
 			sudo japm install -i ./keyboard.apk
 			clear
+			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;		
@@ -85,6 +86,7 @@ do
 			clear
 			neofetch
 			echo 'Neofetch is nice uh?'
+			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;
@@ -108,6 +110,7 @@ do
 			sudo apt clean
 			echo ''
 			clear
+			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;
