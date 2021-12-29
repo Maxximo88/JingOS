@@ -69,9 +69,9 @@ do
 			sudo apt update
 			sudo apt install -y apt-transport-https apt-xapian-index audacity bleachbit blender bluefish chafa deborphan dirmngr
 			echo '1/5 Apps installed..'
-			sudo apt install -y evince filezilla gdebi gimp rawtherapee gedit git htop ifuse inkscape Kdenlive krita libdvd-pkg
+			sudo apt install -y evince filezilla gdebi gimp rawtherapee gedit git htop ifuse inkscape kdenlive krita libdvd-pkg
 			echo '2/5 Apps installed..'
-			sudo apt install -y libgtk-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus neofetch
+			sudo apt install -y libgtk3-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus neofetch
 			echo '3/5 Apps installed..'
 			sudo apt install -y openjdk-8-jre openscad openshot python3 rhythmbox snapd software-properties-common software-properties-gtk
 			echo '4/5 Apps installed..'
