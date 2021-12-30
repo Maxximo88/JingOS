@@ -74,7 +74,7 @@ do
 			echo '2/5 Apps installed..'
 			sudo apt install -y libgtk3-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus neofetch
 			echo '3/5 Apps installed..'
-			sudo apt install -y openjdk-8-jre openscad openshot python3 rhythmbox snapd sytstemsettings software-properties-common software-properties-gtk
+			sudo apt install -y openjdk-8-jre openscad openshot python3 rhythmbox snapd systemsettings software-properties-common software-properties-gtk
 			echo '4/5 Apps installed..'
 			sudo apt install -y synaptic stacer tasksel thunderbird ttf-mscorefonts-installer vlc wget ufw gufw
 			echo 'All Apps are now installed..'
