@@ -46,6 +46,7 @@ do
 		;;
 		"Install basic Android Apps")
 			echo 'Credit to Cooper eqixcx'
+			#Cooper eqixcx development brench: https://github.com/eqixcx/JingPad-A1-Scripts/blob/main/install-android-env.sh
 			sudo apt install wget
 			echo 'Install F-Droid'
 			wget "https://f-droid.org/F-Droid.apk" -O ./fdroid.apk
