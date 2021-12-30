@@ -29,7 +29,7 @@ echo 'Follow me on Caroblog.it and Twitter @Maxximo88'
 echo -e "\e[1;34m=====================================\e[0m"
 echo ''
 PS3='What is your plan? '
-options=("Install Android environment" "Install basic Android Apps" "Install GNU/Linux proposed software" "Clean Distro" "Quit")
+options=("Install Android environment" "Install basic Android Apps" "Install GNU/Linux proposed software" "Fix Snap App shortcut for JingOS Desktop" "Clean Distro" "Quit")
 select opt in "${options[@]}"
 do
 	case $opt in
@@ -42,7 +42,7 @@ do
 			clear
 			echo -e "\e[1;34mOk, the Android compatibility for JingPad A1 is now installed and ready to work!\e[0m"
 			echo -e "\e[1;34mI suggest to reboot your device\e[0m"
-			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
+			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
 		;;
 		"Install basic Android Apps")
 			echo 'Credit to Cooper eqixcx'
@@ -64,7 +64,7 @@ do
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
 			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
-			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
+			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
 		;;		
 		"Install GNU/Linux proposed software")
 			sudo apt update
@@ -90,13 +90,17 @@ do
 			sudo ufw status
 			echo -e "\e[1;34mPerfect!\e[0m"
 			echo ''
+			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
+			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
+		;;
+		"Fix Snap App shortcut for JingOS Desktop")
 			echo -e "\e[1;34mLet me fix Snap Apps shortcut for JingOS desktop\e[0m"
 			sudo cp -n /var/lib/snapd/desktop/applications/*.desktop /usr/share/applications
 			sudo mv /var/lib/snapd/desktop/applications /var/lib/snapd/desktop/__applications
 			sudo ln -s /usr/share/applications /var/lib/snapd/desktop/applications
 			echo ''
 			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
-			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
+			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
 		;;
 		"Clean Distro")
 			echo ''
@@ -121,7 +125,7 @@ do
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
 			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
-			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
+			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
 		;;
 		"Quit")
 			echo -e "\e[1;34mRemember to follow me on Caroblog.it and Twitter @Maxximo88\e[0m"
