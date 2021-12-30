@@ -40,8 +40,8 @@ do
 			sudo systemctl enable android-compatible-env --now
 			echo ''
 			clear
-			echo 'Ok, the Android compatibility for JingPad A1 is now installed and ready to work!'
-			echo 'I suggest to reboot your device'
+			echo -e "\e[1;34mOk, the Android compatibility for JingPad A1 is now installed and ready to work!\e[0m"
+			echo -e "\e[1;34mI suggest to reboot your device\e[0m"
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;
 		"Install basic Android Apps")
@@ -63,7 +63,7 @@ do
 			clear
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
-			echo 'What do you want to do now?'
+			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;		
 		"Install GNU/Linux proposed software")
@@ -81,16 +81,21 @@ do
 			sudo dpkg-reconfigure libdvd-pkg
 			sudo apt install -f
 			neofetch
-			echo 'Neofetch is nice uh?'
+			echo -e "\e[1;34mNeofetch is nice uh?\e[0m"
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
-			echo 'I have to enable the UFW firmware now..'
+			echo -e "\e[1;34mI have to enable the UFW firmware now..\e[0m"
 			sudo ufw enable
 			sudo ufw allow ssh
 			sudo ufw status
-			echo 'Perfect!'
+			echo -e "\e[1;34mPerfect!\e[0m"
 			echo ''
-			echo 'What do you want to do now?'
+			echo -e "\e[1;34mLet me fix Snap Apps shortcut for JingOS desktop\e[0m"
+			sudo cp -n /var/lib/snapd/desktop/applications/*.desktop /usr/share/applications
+			sudo mv /var/lib/snapd/desktop/applications /var/lib/snapd/desktop/__applications
+			sudo ln -s /usr/share/applications /var/lib/snapd/desktop/applications
+			echo ''
+			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;
 		"Clean Distro")
@@ -115,11 +120,11 @@ do
 			clear
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
-			echo 'What do you want to do now?'
+			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
 		;;
 		"Quit")
-			echo 'Remember to follow me on Caroblog.it and Twitter @Maxximo88'
+			echo -e "\e[1;34mRemember to follow me on Caroblog.it and Twitter @Maxximo88\e[0m"
 			echo ''
 			break
 		;;
