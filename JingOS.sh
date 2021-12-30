@@ -102,6 +102,7 @@ do
 			sudo cp -n /var/lib/snapd/desktop/applications/*.desktop /usr/share/applications
 			sudo mv /var/lib/snapd/desktop/applications /var/lib/snapd/desktop/__applications
 			sudo ln -s /usr/share/applications /var/lib/snapd/desktop/applications
+			sudo snap install snap-store
 			echo 'Creating desktop Snap apps shortcut..'
 			echo -e "\e[1;34mOk, done. Remember that you have to run this point just once!\e[0m"
 			echo ''
