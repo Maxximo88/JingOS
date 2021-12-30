@@ -68,21 +68,27 @@ do
 		;;		
 		"Install GNU/Linux proposed software")
 			sudo apt update
-			sudo apt install -y apt-transport-https apt-xapian-index audacity bleachbit blender bluefish chafa deborphan dirmngr
+			sudo apt install -y apt-transport-https apt-xapian-index audacity bleachbit blender bluefish chafa deborphan dirmngr desktop-file-utils
 			echo '1/5 Apps installed..'
 			sudo apt install -y evince filezilla gdebi gimp rawtherapee gedit git htop ifuse inkscape kdenlive krita libdvd-pkg
 			echo '2/5 Apps installed..'
 			sudo apt install -y libgtk3-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus neofetch
 			echo '3/5 Apps installed..'
-			sudo apt install -y openjdk-8-jre openscad openshot python3 rhythmbox snapd software-properties-common software-properties-gtk
+			sudo apt install -y openjdk-8-jre openscad openshot python3 rhythmbox snapd sytstemsettings software-properties-common software-properties-gtk
 			echo '4/5 Apps installed..'
-			sudo apt install -y synaptic stacer tasksel thunderbird ttf-mscorefonts-installer vlc wget
+			sudo apt install -y synaptic stacer tasksel thunderbird ttf-mscorefonts-installer vlc wget ufw gufw
 			echo 'All Apps are now installed..'
 			sudo dpkg-reconfigure libdvd-pkg
 			sudo apt install -f
 			neofetch
 			echo 'Neofetch is nice uh?'
 			echo -e "\e[1;34m=====================================\e[0m"
+			echo ''
+			echo 'I have to enable the UFW firmware now..'
+			sudo ufw enable
+			sudo ufw allow ssh
+			sudo ufw status
+			echo 'Perfect!'
 			echo ''
 			echo 'What do you want to do now?'
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Clean Distro; 5.Quit\e[0m"
