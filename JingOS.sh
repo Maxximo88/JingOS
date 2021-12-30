@@ -95,6 +95,9 @@ do
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
 		;;
 		"Fix Snap App shortcut for JingOS Desktop")
+			echo -e "\e[1;34mLet me see if Snapd is properly installed\e[0m"
+			sudo apt update && sudo apt install snapd
+			sudo snap install core
 			echo -e "\e[1;34mLet me fix Snap Apps shortcut for JingOS desktop\e[0m"
 			sudo cp -n /var/lib/snapd/desktop/applications/*.desktop /usr/share/applications
 			sudo mv /var/lib/snapd/desktop/applications /var/lib/snapd/desktop/__applications
