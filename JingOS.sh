@@ -69,17 +69,18 @@ do
 		"Install GNU/Linux proposed software")
 			sudo apt update
 			sudo apt install -y apt-transport-https apt-xapian-index audacity bleachbit blender bluefish chafa deborphan dirmngr desktop-file-utils
-			echo '1/5 Apps installed..'
+			echo -e "\e[1;34m1/5 Apps installed..\e[0m"
 			sudo apt install -y evince filezilla gdebi gimp rawtherapee gedit git htop ifuse inkscape kdenlive krita libdvd-pkg
-			echo '2/5 Apps installed..'
+			echo -e "\e[1;34m2/5 Apps installed..\e[0m"
 			sudo apt install -y libgtk3-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus neofetch
-			echo '3/5 Apps installed..'
+			echo -e "\e[1;34m3/5 Apps installed..\e[0m"
 			sudo apt install -y openjdk-8-jre openscad openshot python3 rhythmbox snapd systemsettings software-properties-common software-properties-gtk
-			echo '4/5 Apps installed..'
+			echo -e "\e[1;34m4/5 Apps installed..\e[0m"
 			sudo apt install -y synaptic stacer tasksel thunderbird ttf-mscorefonts-installer vlc wget ufw gufw
-			echo 'All Apps are now installed..'
+			echo -e "\e[1;34mAll Apps are now installed..\e[0m"
 			sudo dpkg-reconfigure libdvd-pkg
 			sudo apt install -f
+			clear
 			neofetch
 			echo -e "\e[1;34mNeofetch is nice uh?\e[0m"
 			echo -e "\e[1;34m=====================================\e[0m"
@@ -88,7 +89,7 @@ do
 			sudo ufw enable
 			sudo ufw allow ssh
 			sudo ufw status
-			echo -e "\e[1;34mPerfect!\e[0m"
+			echo -e "\e[1;34mPerfect, the UFW firmware is properly running!\e[0m"
 			echo ''
 			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
@@ -98,28 +99,28 @@ do
 			sudo cp -n /var/lib/snapd/desktop/applications/*.desktop /usr/share/applications
 			sudo mv /var/lib/snapd/desktop/applications /var/lib/snapd/desktop/__applications
 			sudo ln -s /usr/share/applications /var/lib/snapd/desktop/applications
-			echo ''
-			echo -e "\e[1;34mRemember that you have to run this point just once!\e[0m"
+			echo 'Creating desktop Snap apps shortcut..'
+			echo -e "\e[1;34mOk, done. Remember that you have to run this point just once!\e[0m"
 			echo ''
 			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
 			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
 		;;
 		"Clean Distro")
 			echo ''
-			echo 'Verify packages'
+			echo -e "\e[1;34mVerify packages\e[0m"
 			echo ''
 			sudo apt update
 			sudo apt install -f
 			echo ''
-			echo 'Remove unuseful depQuitencies'
+			echo -e "\e[1;34mRemove unuseful dependencies\e[0m"
 			echo ''
 			sudo apt --purge autoremove
 			echo ''
-			echo 'Remove obsolete packages'
+			echo -e "\e[1;34mRemove obsolete packages\e[0m"
 			echo ''
 			sudo apt autoclean
 			echo ''
-			echo 'Remove obsolete downloaded packages'
+			echo -e "\e[1;34mRemove obsolete downloaded packages\e[0m"
 			echo ''
 			sudo apt clean
 			echo ''
