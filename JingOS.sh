@@ -70,7 +70,7 @@ do
 			sudo apt update
 			sudo apt install -y apt-transport-https apt-xapian-index audacity bleachbit blender bluefish chafa deborphan dirmngr desktop-file-utils
 			echo -e "\e[1;34m1/5 Apps installed..\e[0m"
-			sudo apt install -y evince filezilla gdebi gimp rawtherapee gedit git htop ifuse inkscape inxi kdenlive krita libdvd-pkg
+			sudo apt install -y evince filezilla gdebi gimp rawtherapee gedit git hardinfo htop ifuse inkscape inxi kdenlive krita libdvd-pkg
 			echo -e "\e[1;34m2/5 Apps installed..\e[0m"
 			sudo apt install -y libgtk3-perl libreoffice libreoffice-gtk3 libreoffice-kde5 libreoffice-style-sifr nautilus neofetch
 			echo -e "\e[1;34m3/5 Apps installed..\e[0m"
