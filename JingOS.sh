@@ -29,7 +29,15 @@ echo 'Follow me on Caroblog.it and Twitter @Maxximo88'
 echo -e "\e[1;34m=====================================\e[0m"
 echo ''
 PS3='What is your plan? '
-options=("Install Android environment" "Install basic Android Apps" "Install GNU/Linux proposed software" "Fix Snap App shortcut for JingOS Desktop" "Clean Distro" "Quit")
+options=("Install Android environment" "Install basic Android Apps" "Install GNU/Linux proposed software" "Fix Snap App shortcut for JingOS Desktop" "Enable SSH" "Clean Distro" "Quit")
+
+jingos_print_menu(){
+	for((i=0;i<${#options[@]};i++))
+	do
+			echo "$((i+1))) ${options[$i]}"
+	done
+}
+
 select opt in "${options[@]}"
 do
 	case $opt in
@@ -42,7 +50,8 @@ do
 			clear
 			echo -e "\e[1;34mOk, the Android compatibility for JingPad A1 is now installed and ready to work!\e[0m"
 			echo -e "\e[1;34mI suggest to reboot your device\e[0m"
-			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
+			echo ''
+			jingos_print_menu
 		;;
 		"Install basic Android Apps")
 			echo 'Credit to Cooper eqixcx'
@@ -63,8 +72,7 @@ do
 			clear
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
-			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
-			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
+			jingos_print_menu
 		;;		
 		"Install GNU/Linux proposed software")
 			sudo apt update
@@ -76,7 +84,7 @@ do
 			echo -e "\e[1;34m3/5 Apps installed..\e[0m"
 			sudo apt install -y openjdk-8-jre openscad openshot python3 rhythmbox snapd systemsettings software-properties-common software-properties-gtk
 			echo -e "\e[1;34m4/5 Apps installed..\e[0m"
-			sudo apt install -y synaptic stacer tasksel thunderbird ttf-mscorefonts-installer vlc wget ufw gufw
+			sudo apt install -y synaptic stacer tasksel thunderbird ttf-mscorefonts-installer vlc wget curl ufw gufw
 			echo -e "\e[1;34mAll Apps are now installed..\e[0m"
 			sudo dpkg-reconfigure libdvd-pkg
 			sudo apt install -f
@@ -92,8 +100,7 @@ do
 			sudo ufw status
 			echo -e "\e[1;34mPerfect, the UFW firmware is properly running!\e[0m"
 			echo ''
-			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
-			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
+			jingos_print_menu
 		;;
 		"Fix Snap App shortcut for JingOS Desktop")
 			echo -e "\e[1;34mLet me see if Snapd is properly installed\e[0m"
@@ -107,8 +114,20 @@ do
 			echo 'Creating desktop Snap apps shortcut..'
 			echo -e "\e[1;34mOk, done. Remember that you have to run this point just once!\e[0m"
 			echo ''
-			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
-			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
+			jingos_print_menu
+		;;
+		"Enable SSH")
+			sudo apt update
+			sudo apt install -y openssh-server
+			echo ''
+			echo -e "\e[1;34mSSH server installed\e[0m"
+			echo ''
+			sudo sed -i 's/#GSSAPIAuthentication no/GSSAPIAuthentication no/' /etc/ssh/sshd_config
+			sudo service ssh restart
+			echo ''
+			echo -e "\e[1;34mSSH server configured. You can connect with (username)@jingos or (username)@ipaddress\e[0m"
+			echo ''
+			jingos_print_menu
 		;;
 		"Clean Distro")
 			echo ''
@@ -132,8 +151,8 @@ do
 			clear
 			echo -e "\e[1;34m=====================================\e[0m"
 			echo ''
-			echo -e "\e[1;34mWhat do you want to do now?\e[0m"
-			echo -e "\e[1;31mOptions available: 1.Install Android environment; 2.Install basic Android Apps; 3.Install GNU/Linux proposed software; 4.Fix Snap App shortcut for JingOS Desktop; 5.Clean Distro; 6.Quit\e[0m"
+			echo ''
+			jingos_print_menu
 		;;
 		"Quit")
 			echo -e "\e[1;34mRemember to follow me on Caroblog.it and Twitter @Maxximo88\e[0m"
@@ -143,3 +162,5 @@ do
 		*) echo invalid option;;
 	esac
 done
+
+unset -f jingos_print_menu
