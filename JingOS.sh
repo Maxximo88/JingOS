@@ -52,7 +52,7 @@ do
 			wget "https://f-droid.org/F-Droid.apk" -O ./fdroid.apk
 			sudo japm install -i ./fdroid.apk
 			echo 'Install Aurora Store'
-			wget "https://files.auroraoss.com/AuroraStore/Nightly/AuroraStore-nightly-signed-202112080000.apk" -O ./aurora.apk
+			wget "https://files.auroraoss.com/AuroraStore/Nightly/AuroraStore-nightly-signed-"$(date +%Y%m%d -u)"0000.apk" -O ./aurora.apk
 			sudo japm install -i ./aurora.apk
 			echo 'Install Amaze File Manager'
 			wget "https://github.com/TeamAmaze/AmazeFileManager/releases/download/v3.6.7/app-fdroid-release.apk" -O ./file.apk
